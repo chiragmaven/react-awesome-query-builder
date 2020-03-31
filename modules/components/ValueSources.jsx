@@ -1,5 +1,6 @@
 import React, { Component, PureComponent } from 'react';
-import { Icon, Popover, Radio } from 'antd';
+import { EllipsisOutlined } from '@ant-design/icons';
+import { Popover, Radio } from 'antd';
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
 
@@ -36,7 +37,7 @@ export class ValueSources extends PureComponent {
       return (
           <span>
               <Popover content={content} title={valueSourcesPopupTitle}>
-                  <Icon type="ellipsis" />
+                <EllipsisOutlined />
               </Popover>
           </span>
       );
