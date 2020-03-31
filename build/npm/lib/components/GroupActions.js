@@ -9,6 +9,8 @@ var _button = _interopRequireDefault(require("antd/lib/button"));
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _icons = require("@ant-design/icons");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -80,25 +82,22 @@ var GroupActions = /*#__PURE__*/function (_PureComponent) {
 
       var addRuleBtn = !immutableGroupsMode && canAddRule && /*#__PURE__*/_react["default"].createElement(_button["default"], {
         key: "group-add-rule",
-        icon: "plus",
         className: "action action--ADD-RULE",
         onClick: addRule
-      }, addRuleLabel);
+      }, /*#__PURE__*/_react["default"].createElement(_icons.PlusOutlined, null), addRuleLabel);
 
       var addGroupBtn = !immutableGroupsMode && canAddGroup && /*#__PURE__*/_react["default"].createElement(_button["default"], {
         key: "group-add-group",
         className: "action action--ADD-GROUP",
-        icon: "plus-circle-o",
         onClick: addGroup
-      }, addGroupLabel);
+      }, /*#__PURE__*/_react["default"].createElement(_icons.PlusCircleOutlined, null), addGroupLabel);
 
       var delGroupBtn = !immutableGroupsMode && canDeleteGroup && /*#__PURE__*/_react["default"].createElement(_button["default"], {
         key: "group-del",
         type: "danger",
-        icon: "delete",
         className: "action action--DELETE",
         onClick: removeSelf
-      }, delGroupLabel);
+      }, /*#__PURE__*/_react["default"].createElement(_icons.DeleteOutlined, null), delGroupLabel);
 
       return /*#__PURE__*/_react["default"].createElement("div", {
         className: "group--actions ".concat(position)

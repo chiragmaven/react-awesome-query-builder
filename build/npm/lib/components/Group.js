@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = exports.Group = void 0;
 
-var _icon = _interopRequireDefault(require("antd/lib/icon"));
-
 var _modal = _interopRequireDefault(require("antd/lib/modal"));
+
+var _icons = require("@ant-design/icons");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -265,9 +265,7 @@ var Group = /*#__PURE__*/function (_PureComponent) {
         key: "group-drag-icon",
         className: "qb-drag-handler group--drag-handler",
         onMouseDown: handleDraggerMouseDown
-      }, /*#__PURE__*/_react["default"].createElement(_icon["default"], {
-        type: "bars"
-      }), " ");
+      }, /*#__PURE__*/_react["default"].createElement(_icons.BarsOutlined, null), " ");
 
       return drag;
     }

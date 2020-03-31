@@ -7,11 +7,11 @@ exports.ValueSources = void 0;
 
 var _popover = _interopRequireDefault(require("antd/lib/popover"));
 
-var _icon = _interopRequireDefault(require("antd/lib/icon"));
-
 var _radio = _interopRequireDefault(require("antd/lib/radio"));
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _icons = require("@ant-design/icons");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -87,9 +87,7 @@ var ValueSources = /*#__PURE__*/function (_PureComponent) {
       return /*#__PURE__*/_react["default"].createElement("span", null, /*#__PURE__*/_react["default"].createElement(_popover["default"], {
         content: content,
         title: valueSourcesPopupTitle
-      }, /*#__PURE__*/_react["default"].createElement(_icon["default"], {
-        type: "ellipsis"
-      })));
+      }, /*#__PURE__*/_react["default"].createElement(_icons.EllipsisOutlined, null)));
     }
   }]);
 

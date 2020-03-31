@@ -7,11 +7,11 @@ exports["default"] = exports.FieldWrapper = void 0;
 
 var _button = _interopRequireDefault(require("antd/lib/button"));
 
-var _icon = _interopRequireDefault(require("antd/lib/icon"));
-
 var _col = _interopRequireDefault(require("antd/lib/col"));
 
 var _modal = _interopRequireDefault(require("antd/lib/modal"));
+
+var _icons = require("@ant-design/icons");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -249,19 +249,16 @@ var Rule = (_dec = (0, _Draggable["default"])("rule"), (0, _RuleContainer["defau
         key: "rule-drag-icon",
         className: "qb-drag-handler rule--drag-handler",
         onMouseDown: this.props.handleDraggerMouseDown
-      }, /*#__PURE__*/_react["default"].createElement(_icon["default"], {
-        type: "bars"
-      }), " ");
+      }, /*#__PURE__*/_react["default"].createElement(_icons.BarsOutlined, null), " ");
 
       var del = /*#__PURE__*/_react["default"].createElement("div", {
         key: "rule-header",
         className: "rule--header"
       }, !immutableGroupsMode && /*#__PURE__*/_react["default"].createElement(_button["default"], {
         type: "danger",
-        icon: "delete",
         onClick: this.removeSelf,
         size: renderSize
-      }, deleteLabel));
+      }, /*#__PURE__*/_react["default"].createElement(_icons.DeleteOutlined, null), deleteLabel));
 
       var body = /*#__PURE__*/_react["default"].createElement("div", {
         key: "rule-body",

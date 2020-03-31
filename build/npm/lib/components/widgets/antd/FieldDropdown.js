@@ -9,13 +9,13 @@ var _dropdown = _interopRequireDefault(require("antd/lib/dropdown"));
 
 var _button = _interopRequireDefault(require("antd/lib/button"));
 
-var _icon = _interopRequireDefault(require("antd/lib/icon"));
-
 var _tooltip = _interopRequireDefault(require("antd/lib/tooltip"));
 
 var _menu = _interopRequireDefault(require("antd/lib/menu"));
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _icons = require("@ant-design/icons");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -119,9 +119,7 @@ var FieldDropdown = /*#__PURE__*/function (_PureComponent) {
       var toggler = /*#__PURE__*/_react["default"].createElement(_button["default"], {
         size: config.settings.renderSize,
         disabled: readonly
-      }, togglerLabel, " ", /*#__PURE__*/_react["default"].createElement(_icon["default"], {
-        type: "down"
-      }));
+      }, togglerLabel, " ", /*#__PURE__*/_react["default"].createElement(_icons.DownOutlined, null));
 
       if (tooltipText) {
         toggler = /*#__PURE__*/_react["default"].createElement(_tooltip["default"], {
